@@ -28,7 +28,6 @@
             color: #4C5270;
         }
         
-        /* Language Switcher */
         .lang-switcher {
             position: fixed;
             top: 1.5rem;
@@ -60,7 +59,6 @@
             color: white;
         }
         
-        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -148,7 +146,6 @@
             color: #ABAEB9;
         }
         
-        /* Visual Demo Section */
         .demo-section {
             padding: 6rem 2rem;
             background: white;
@@ -201,7 +198,6 @@
             color: #4C5270;
         }
         
-        /* How It Works */
         .how-section {
             padding: 6rem 2rem;
             background: #E7E9F5;
@@ -251,7 +247,6 @@
             font-size: 0.95rem;
         }
         
-        /* Social Proof */
         .proof-section {
             padding: 4rem 2rem;
             background: white;
@@ -271,7 +266,6 @@
             margin-top: 0.5rem;
         }
         
-        /* CTA Final */
         .final-cta {
             padding: 8rem 2rem;
             background: linear-gradient(135deg, #4C5270 0%, #6B7397 100%);
@@ -357,7 +351,6 @@
             }
         }
         
-        /* Footer */
         .footer {
             padding: 2rem;
             text-align: center;
@@ -365,7 +358,6 @@
             font-size: 0.9rem;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .hero-headline {
                 font-size: 2.2rem;
@@ -395,13 +387,11 @@
     </style>
 </head>
 <body>
-    <!-- Language Switcher -->
     <div class="lang-switcher">
         <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">FR</button>
         <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
     </div>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="logo">EasySew</h1>
@@ -427,7 +417,6 @@
         </div>
     </section>
 
-    <!-- Visual Demo -->
     <section class="demo-section">
         <div class="demo-container">
             <div class="demo-grid">
@@ -448,7 +437,6 @@
         </div>
     </section>
 
-    <!-- How It Works -->
     <section class="how-section">
         <h2 class="section-title" data-i18n="how-title">Comment ça marche</h2>
         
@@ -473,13 +461,11 @@
         </div>
     </section>
 
-    <!-- Social Proof -->
     <section class="proof-section">
         <div class="proof-stat" id="counter">2,847</div>
         <p class="proof-label" data-i18n="proof">patrons déjà créés</p>
     </section>
 
-    <!-- Final CTA -->
     <section class="final-cta" id="waitlist">
         <h2 data-i18n="final-h">Rejoignez la révolution</h2>
         <p data-i18n="final-p">Accès anticipé + 3 patrons gratuits</p>
@@ -504,7 +490,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>EasySew © 2025 · <span data-i18n="footer">Créer · Coudre · Connecter</span></p>
     </footer>
@@ -584,14 +569,12 @@
             }
         }
         
-        // Counter animation
         let count = 2847;
         setInterval(() => {
             count += Math.floor(Math.random() * 3) + 1;
             document.getElementById('counter').textContent = count.toLocaleString(currentLang === 'fr' ? 'fr-FR' : 'en-US');
         }, 7000);
         
-        // Email form with Formspree
         document.getElementById('emailForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
@@ -631,7 +614,6 @@
             }
         });
         
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
